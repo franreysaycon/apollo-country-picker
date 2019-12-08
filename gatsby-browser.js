@@ -1,7 +1,11 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+import React from "react"
+import { ApolloProvider } from "@apollo/react-hooks"
+import client from "./src/apollo/client"
+import CurrentContextProvider from "./src/providers/current-country"
+import "typeface-poppins"
 
-// You can delete this file if you're not using it
+export const wrapRootElement = ({ element }) => (
+  <ApolloProvider client={client}>
+    <CurrentContextProvider>{element}</CurrentContextProvider>
+  </ApolloProvider>
+)
