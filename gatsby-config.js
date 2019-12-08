@@ -4,9 +4,4 @@ module.exports = {
     description: `Proof of concept of apollo as a state management`,
     author: `@franreysaycon`,
   },
-  plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-  ],
 }
